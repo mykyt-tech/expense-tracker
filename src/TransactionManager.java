@@ -9,4 +9,8 @@ public class TransactionManager {
         LocalDate date = LocalDate.now();
         transactions.add(new Transaction(date, description, amount, type));
     }
+
+    public static ArrayList<Transaction> getTransactionHistory() {
+        return new ArrayList<>(transactions);
+    }
 }
