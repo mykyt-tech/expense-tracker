@@ -32,6 +32,7 @@ public class TrackerApp {
 
                     System.out.print("Enter the amount (must be positive): ");
                     double amount = sc.nextDouble();
+                    sc.nextLine();
 
                     System.out.print("Enter the type (income or expense): ");
                     String typeStr = sc.nextLine();
