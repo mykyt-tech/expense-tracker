@@ -35,7 +35,7 @@ public class TrackerApp {
                     sc.nextLine();
 
                     System.out.print("Enter the type (income or expense): ");
-                    String typeStr = sc.nextLine();
+                    String typeStr = sc.nextLine().trim().toLowerCase();
                     TransactionType type;
 
                     if (typeStr.equals("income")) {
