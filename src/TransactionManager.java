@@ -24,18 +24,11 @@ public class TransactionManager {
 
         for (Transaction t : transactions) {
             TransactionType type = t.getType();
-            switch (type) {
-                case INCOME:
-                    totalIncome += t.getAmount();
-                    break;
-                case EXPENSE:
-                    totalExpenses += t.getAmount();
-                    break;
-                default:
-                    System.out.println("-----------------------------");
-                    System.out.println("Something went wrong");
-                    System.out.println("Summary cannot be calculated");
-                    return null;
+
+            if (type == TransactionType.INCOME) {
+                totalIncome += t.getAmount();
+            } else if (type == TransactionType.EXPENSE) {
+                totalExpenses += t.getAmount();
             }
         }
 
