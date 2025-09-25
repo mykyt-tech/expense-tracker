@@ -41,7 +41,6 @@ java TrackerApp
 ## Usage
 ### Menu Options
 1. Add Transaction
-    - Enter the task date in YYYY-MM-DD format.
     - Enter a description.
     - Enter the amount (must be positive).
     - Enter the type (income or expense).
