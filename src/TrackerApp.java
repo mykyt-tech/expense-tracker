@@ -11,16 +11,16 @@ public class TrackerApp {
 
         readTransactionsFromFile(fileName);
 
-        System.out.println("-----------------------------");
-        System.out.println("Please choose an option:");
-        System.out.println("1. Add new transaction");
-        System.out.println("2. View transaction history");
-        System.out.println("3. Show summary");
-        System.out.println("4. Exit");
-        System.out.println("-----------------------------");
-        System.out.print("Enter your choice: ");
-
         while (running) {
+            System.out.println("-----------------------------");
+            System.out.println("Please choose an option:");
+            System.out.println("1. Add new transaction");
+            System.out.println("2. View transaction history");
+            System.out.println("3. Show summary");
+            System.out.println("4. Exit");
+            System.out.println("-----------------------------");
+            System.out.print("Enter your choice: ");
+
             int option = sc.nextInt();
             sc.nextLine();
 
@@ -49,6 +49,10 @@ public class TrackerApp {
                     }
 
                     TransactionManager.addNewTransaction(description, amount, type);
+
+                    System.out.println("-----------------------------");
+                    System.out.println("New transaction successfully added");
+
                     break;
                 case 2:
                     ArrayList<Transaction> transactions = TransactionManager.getTransactionHistory();
